@@ -1,0 +1,297 @@
+<html><head><base href="https://portfolioprofessionnel.fr/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mon Portfolio Professionnel</title>
+<style>
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  main {
+    margin-top: 60px;
+    padding: 2rem 0;
+  }
+  
+  .hero {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .portfolio-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .portfolio-item-content {
+    padding: 1rem;
+  }
+  
+  .skills {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+  }
+  
+  .skills h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .portfolio {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container">
+        <h1>Bienvenue sur Mon Portfolio Professionnel</h1>
+        <p>Présentation de mon travail et de mes compétences en développement</p>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container">
+      <h2>Mon Portfolio</h2>
+      <div class="portfolio">
+        <div class="portfolio-item">
+          <img src="projet1.jpg" alt="Design de site e-commerce avec interface moderne, présentant une grille de produits et un panier d'achat" width="300" height="200">
+          <div class="portfolio-item-content">
+            <h3>Site E-commerce</h3>
+            <p>Une boutique en ligne responsive construite avec React et Node.js</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="projet2.jpg" alt="Interface d'application mobile pour le suivi de fitness, montrant des plans d'entraînement et des graphiques de progression" width="300" height="200">
+          <div class="portfolio-item-content">
+            <h3>Application de Suivi Fitness</h3>
+            <p>Application iOS et Android développée avec React Native</p>
+            <p>Test github action </p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="projet3.jpg" alt="Design de tableau de bord pour une plateforme de visualisation de données, avec divers graphiques et diagrammes" width="300" height="200">
+          <div class="portfolio-item-content">
+            <h3>Tableau de Bord de Visualisation de Données</h3>
+            <p>Tableau de bord interactif créé avec D3.js et Vue.js</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="skills">
+      <div class="container">
+        <h2>Mes Compétences</h2>
+        <div class="skills-list">
+          <span class="skill-item">HTML5</span>
+          <span class="skill-item">CSS3</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">React</span>
+          <span class="skill-item">Node.js</span>
+          <span class="skill-item">Vue.js</span>
+          <span class="skill-item">Python</span>
+          <span class="skill-item">Design UI/UX</span>
+          <span class="skill-item">Design Web Responsive</span>
+          <span class="skill-item">APIs RESTful</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Me Contacter</h2>
+      <form id="contact-form">
+        <div>
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Envoyer le Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Mon Portfolio Professionnel. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('nav');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Défilement fluide pour les liens de navigation
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          const navHeight = nav.offsetHeight;
+          const targetPosition = targetElement.offsetTop - navHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      // Gestion de la soumission du formulaire
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const formObject = Object.fromEntries(formData);
+        
+        // Simulation de la soumission du formulaire (à remplacer par un appel API réel)
+        console.log('Formulaire soumis :', formObject);
+        alert('Merci pour votre message ! Je vous répondrai bientôt.');
+        contactForm.reset();
+      });
+      
+      // Ajout d'animation aux éléments du portfolio
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      portfolioItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(item);
+      });
+    });
+  </script>
+</body>
+</html>
