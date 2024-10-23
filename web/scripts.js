@@ -125,15 +125,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fab.addEventListener('click', () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     });
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    /* particlesJS.load('particles-js', 'assets/particles.json', function() {
         console.log('callback - particles.js config loaded');
-    });
-    VanillaTilt.init(document.querySelectorAll(".skill-card"), {
-        max: 10,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.3,
-    });
+    }); */
+    
     const animatedElements = document.querySelectorAll('.skill-card, .section-title, .objectives-list li');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -170,5 +165,61 @@ document.addEventListener('DOMContentLoaded', (event) => {
         };
     };
     document.querySelectorAll('img').forEach(handleImageError);
+
+    loadSkills();
+    smoothScroll();
+    fetchQuote();
 });
 
+function loadSkills() {
+    const skillsContainer = document.getElementById('SK-competences');
+    
+    // Vérifiez si la balise skills-grid existe
+    if (!skillsContainer) {
+        console.error('Error: Element with ID "skills-grid" not found.');
+        return;
+    }
+
+    fetch('./web/skills.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(skill => {
+                console.log(skill.description);
+                const skillCard = document.createElement('div');
+               
+                skillCard.className = 'skill-card floating';
+                skillCard.setAttribute('data-tilt', '');
+                skillCard.setAttribute('data-tilt-max', '10');
+
+                skillCard.innerHTML = `
+                    <div class="skill-icon">
+                        <img src="${skill.icon}" alt="${skill.type} logo">
+                    </div>
+                    <h3>${skill.type}</h3>
+                    <p>${skill.description}</p>
+                    <a href="${skill.url}" class="skill-link">En savoir plus</a>
+                `;
+
+                skillsContainer.appendChild(skillCard);
+            });
+
+            // Initialiser Vanilla Tilt après avoir ajouté les cartes
+            VanillaTilt.init(document.querySelectorAll(".floating"), {
+                max: 10,
+                speed: 400
+            });
+        })
+        .catch(error => console.error('Error loading skills:', error));
+}
+
+VanillaTilt.init(document.querySelectorAll(".skill-card"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
+});
+
+VanillaTilt.init(document.querySelectorAll(".floating"), {
+    max: 10,
+    speed: 400
+});
