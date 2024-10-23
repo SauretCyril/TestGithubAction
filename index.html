@@ -1,297 +1,881 @@
-<html><head><base href="https://portfolioprofessionnel.fr/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mon Portfolio Professionnel</title>
-<style>
-  :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --text-color: #333;
-    --background-color: #f4f4f4;
-  }
-  
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: var(--secondary-color);
-  }
-  
-  main {
-    margin-top: 60px;
-    padding: 2rem 0;
-  }
-  
-  .hero {
-    background-color: var(--secondary-color);
-    color: white;
-    text-align: center;
-    padding: 4rem 0;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-  }
-  
-  .portfolio-item {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .portfolio-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .portfolio-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .portfolio-item-content {
-    padding: 1rem;
-  }
-  
-  .skills {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem 0;
-  }
-  
-  .skills h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .skill-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-  }
-  
-  footer {
-    background-color: var(--secondary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-  }
-  
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-    
-    .portfolio {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-</head>
-<body>
-  <header>
-    <nav class="container">
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<html>
+    <head>
+        <base href="https://websim.net/personal-site/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cyril Sauret - Développeur Polyvalent</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --primary-color: #3498db;
+                --secondary-color: #9b59b6;
+                --text-color: #000000;
+                --bg-color: #ffffff;
+            }
 
-  <main>
-    <section id="accueil" class="hero">
-      <div class="container">
-        <h1>Bienvenue sur Mon Portfolio Professionnel</h1>
-        <p>Présentation de mon travail et de mes compétences en développement</p>
-      </div>
-    </section>
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', sans-serif;
+                color: var(--text-color);
+                background: var(--bg-color);  /* Static background */
+                overflow-x: hidden;
+            }
 
-    <section id="portfolio" class="container">
-      <h2>Mon Portfolio</h2>
-      <div class="portfolio">
-        <div class="portfolio-item">
-          <img src="projet1.jpg" alt="Design de site e-commerce avec interface moderne, présentant une grille de produits et un panier d'achat" width="300" height="200">
-          <div class="portfolio-item-content">
-            <h3>Site E-commerce</h3>
-            <p>Une boutique en ligne responsive construite avec React et Node.js</p>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img src="projet2.jpg" alt="Interface d'application mobile pour le suivi de fitness, montrant des plans d'entraînement et des graphiques de progression" width="300" height="200">
-          <div class="portfolio-item-content">
-            <h3>Application de Suivi Fitness</h3>
-            <p>Application iOS et Android développée avec React Native</p>
-            <p>Test github action </p>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img src="projet3.jpg" alt="Design de tableau de bord pour une plateforme de visualisation de données, avec divers graphiques et diagrammes" width="300" height="200">
-          <div class="portfolio-item-content">
-            <h3>Tableau de Bord de Visualisation de Données</h3>
-            <p>Tableau de bord interactif créé avec D3.js et Vue.js</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            #particles-js {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
 
-    <section id="competences" class="skills">
-      <div class="container">
-        <h2>Mes Compétences</h2>
-        <div class="skills-list">
-          <span class="skill-item">HTML5</span>
-          <span class="skill-item">CSS3</span>
-          <span class="skill-item">JavaScript</span>
-          <span class="skill-item">React</span>
-          <span class="skill-item">Node.js</span>
-          <span class="skill-item">Vue.js</span>
-          <span class="skill-item">Python</span>
-          <span class="skill-item">Design UI/UX</span>
-          <span class="skill-item">Design Web Responsive</span>
-          <span class="skill-item">APIs RESTful</span>
-        </div>
-      </div>
-    </section>
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
 
-    <section id="contact" class="container">
-      <h2>Me Contacter</h2>
-      <form id="contact-form">
-        <div>
-          <label for="name">Nom :</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="message">Message :</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Envoyer le Message</button>
-      </form>
-    </section>
-  </main>
+            header {
+                background-color: var(--primary-color);
+                backdrop-filter: blur(5px);
+                color: white;
+                padding: 20px 0;
+            }
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Mon Portfolio Professionnel. Tous droits réservés.</p>
-    </div>
-  </footer>
+            .logo {
+                display: flex;
+                align-items: center;
+            }
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const nav = document.querySelector('nav');
-      const navLinks = document.querySelectorAll('nav a');
-      
-      // Défilement fluide pour les liens de navigation
-      navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          const navHeight = nav.offsetHeight;
-          const targetPosition = targetElement.offsetTop - navHeight;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        });
-      });
-      
-      // Gestion de la soumission du formulaire
-      const contactForm = document.getElementById('contact-form');
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        const formObject = Object.fromEntries(formData);
-        
-        // Simulation de la soumission du formulaire (à remplacer par un appel API réel)
-        console.log('Formulaire soumis :', formObject);
-        alert('Merci pour votre message ! Je vous répondrai bientôt.');
-        contactForm.reset();
-      });
-      
-      // Ajout d'animation aux éléments du portfolio
-      const portfolioItems = document.querySelectorAll('.portfolio-item');
-      const observerOptions = {
-        threshold: 0.5,
-        rootMargin: '0px 0px -50px 0px'
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-      
-      portfolioItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(item);
-      });
-    });
-  </script>
-</body>
+            .logo img {
+                max-height: 50px;
+                width: auto;
+                vertical-align: middle;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-menu {
+                display: flex;
+                gap: 10px;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav-link {
+                display: inline-block;
+                padding: 8px 16px;
+                color: white;
+                text-decoration: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .nav-link:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+                transform: translateY(-2px);
+            }
+
+            .hero, #competences, #projets {
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                padding-top: 200px;
+                position: relative;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                margin-bottom: 20px;
+                color: var(--text-color);
+            }
+
+            .hero p {
+                font-size: 24px;
+                margin-bottom: 30px;
+                color: var(--text-color);
+            }
+
+            .cta-button, .submit-btn {
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: var(--primary-color);
+                color: var(--bg-color);
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            .cta-button:hover, .submit-btn:hover {
+                background-color: var(--secondary-color);
+            }
+
+            .section {
+                padding: 100px 0;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2.5em;
+                margin-bottom: 50px;
+                position: relative;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 3px;
+                background-color: var(--accent-color);
+                margin: 20px auto 0;
+            }
+
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+
+            .skill-card {
+                background-color: white;
+                border-radius: 10px;
+                padding: 30px;
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                position: relative;
+            }
+
+            .skill-card::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 0;
+                background: linear-gradient(to top, var(--secondary-color), transparent);
+                transition: height 0.3s ease;
+                z-index: -1;
+                opacity: 0.7;
+            }
+
+            .skill-card:hover::before {
+                height: 100%;
+                animation: flameRise 1s infinite;
+            }
+
+            @keyframes flameRise {
+                0%, 100% {
+                    height: 30%;
+                }
+                50% {
+                    height: 70%;
+                }
+            }
+
+            .skill-card:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .skill-icon img {
+                transition: transform 0.3s ease;
+                width: 64px;
+                height: 64px;
+            }
+
+            .skill-card:hover .skill-icon img {
+                transform: rotate(360deg);
+            }
+
+            .timeline {
+                position: relative;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background-color: var(--primary-color);
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3px;
+            }
+
+            .timeline-item {
+                padding: 10px 40px;
+                position: relative;
+                background-color: inherit;
+                width: 50%;
+            }
+
+            .timeline-item::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                right: -17px;
+                background-color: var(--bg-color);
+                border: 4px solid var(--secondary-color);
+                top: 15px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+            }
+
+            .timeline-item:nth-child(even)::after {
+                left: -16px;
+            }
+
+            .timeline-content {
+                padding: 20px 30px;
+                background-color: white;
+                position: relative;
+                border-radius: 6px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .timeline-content h3 {
+                color: var(--primary-color);
+                margin-bottom: 10px;
+            }
+
+            .timeline-content ul {
+                padding-left: 20px;
+            }
+
+            .timeline-content li {
+                margin-bottom: 5px;
+            }
+
+            .bio-content {
+                display: flex;
+                align-items: flex-start;
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+
+            .profile-photo img {
+                border-radius: 50%;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+
+            .bio-text {
+                flex: 1;
+            }
+
+            .photo-gallery {
+                margin-top: 40px;
+            }
+
+            .gallery-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .gallery-img {
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .gallery-img:hover {
+                transform: scale(1.05);
+            }
+
+            .image-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            .image-modal img {
+                max-width: 90%;
+                max-height: 90%;
+            }
+
+            .close-modal {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            #company-info {
+                background-color: var(--bg-color);
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            #company-info img {
+                max-width: 200px;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+            #company-info h3 {
+                color: var(--primary-color);
+                margin-bottom: 10px;
+            }
+
+            #company-info ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            #company-info li {
+                margin-bottom: 5px;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-fadeInUp {
+                animation: fadeInUp 0.6s ease-out;
+            }
+
+            .portal-effect {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                opacity: 0.8;
+                z-index: -1;
+            }
+
+            .portal-effect::before, .portal-effect::after {
+                display: none;
+            }
+
+            #citation-du-jour {
+                background-color: var(--bg-color);
+                padding: 0;
+                height: 100px;
+                display: flex;
+                align-items: center;
+            }
+
+            #citation-du-jour .quote-container {
+                background-color: #ffffff;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 100%;
+            }
+
+            #citation-du-jour #quote-content {
+                color: var(--primary-color);
+                font-size: 1em;
+                font-style: italic;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            #competences {
+                background-color: var(--bg-color);
+            }
+
+            #competences .section-title, #competences .skill-card h3, #competences .skill-card p {
+                color: var(--text-color);
+            }
+
+            #projets {
+                background-color: var(--bg-color);
+            }
+
+            #projets .section-title, #projets .skill-card h3, #projets .skill-card p {
+                color: var(--text-color);
+            }
+
+            @keyframes jsRotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .javascript-logo {
+                width: 64px;
+                height: 64px;
+                fill: #f7df1e;
+                animation: jsRotate 10s linear infinite;
+            }
+
+            .skill-card:hover .javascript-logo {
+                animation-duration: 2s;
+            }
+
+            #citation-du-jour {
+                background-color: var(--bg-color);
+                padding: 0;
+                height: 100px;
+                display: flex;
+                align-items: center;
+            }
+
+            #citation-du-jour .quote-container {
+                background-color: #ffffff;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 100%;
+            }
+
+            #citation-du-jour #quote-content {
+                color: var(--primary-color);
+                font-size: 1em;
+                font-style: italic;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="#" class="logo">
+                        <img src="https://example.com/your-logo.png" alt="Cyril Sauret Logo" id="header-logo">
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                        <li><a href="#projets" class="nav-link">Projets</a></li>
+                        <li><a href="#competences" class="nav-link">Compétences</a></li>
+                        <li><a href="#parcours" class="nav-link">Parcours</a></li>
+                        <li><a href="#objectifs" class="nav-link">Objectifs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="accueil" class="hero">
+                <div class="portal-effect"></div>
+                <div id="hero-particles"></div>
+                <div class="container">
+                    <h1 class="animate-fadeInUp">Cyril Sauret - Développeur Polyvalent</h1>
+                    <p class="animate-fadeInUp"><span id="typed"></span></p>
+                    <a href="#competences" class="cta-button">Découvrir mes compétences</a>
+                </div>
+            </section>
+            <section id="citation-du-jour" class="section">
+                <div class="container">
+                    <h2 class="section-title">Citation Tech du Jour</h2>
+                    <div class="quote-container">
+                        <p id="quote-content">Chargement de la citation...</p>
+                    </div>
+                </div>
+            </section>
+            <section id="projets" class="section">
+                <div class="container">
+                    <h2 class="section-title">Mes Projets</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://example.com/project1-icon.svg" alt="Projet 1 icon">
+                            </div>
+                            <h3>Projet 1</h3>
+                            <p>Description brève du projet 1</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://example.com/project2-icon.svg" alt="Projet 2 icon">
+                            </div>
+                            <h3>Projet 2</h3>
+                            <p>Description brève du projet 2</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://example.com/project3-icon.svg" alt="Projet 3 icon">
+                            </div>
+                            <h3>Projet 3</h3>
+                            <p>Description brève du projet 3</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="competences" class="section">
+                <div class="container">
+                    <h2 class="section-title">Mes Compétences</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo">
+                            </div>
+                            <h3>Python</h3>
+                            <p>Développement d'applications robustes et scripts d'automatisation</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux logo">
+                            </div>
+                            <h3>Linux</h3>
+                            <p>Administration système, sécurité et optimisation des performances</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="Base de Données logo">
+                            </div>
+                            <h3>Base de Données</h3>
+                            <p>Gestion et optimisation de bases de données</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Graphisme logo">
+                            </div>
+                            <h3>Graphisme</h3>
+                            <p>Création graphique et design</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Web Design logo">
+                            </div>
+                            <h3>Web Design</h3>
+                            <p>Conception de sites web attrayants</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                        <div class="skill-card floating" data-tilt data-tilt-max="10">
+                            <div class="skill-icon">
+                                <svg class="javascript-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/>
+                                </svg>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p>Développement front-end et back-end avec JavaScript</p>
+                            <a href="#" class="skill-link">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="parcours" class="section">
+                <div class="container">
+                    <h2 class="section-title">Mon Parcours Professionnel</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2022 - Présent</h3>
+                                <p>Développeur Full Stack chez TechInnovate</p>
+                                <ul>
+                                    <li>Développement d'une plateforme e-commerce avec Django et React</li>
+                                    <li>Optimisation des performances de la base de données MySQL</li>
+                                    <li>Mise en place d'un système de CI/CD avec GitLab</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2020 - 2022</h3>
+                                <p>Web Designer chez DesignCraft</p>
+                                <ul>
+                                    <li>Création de maquettes et prototypes pour sites web</li>
+                                    <li>Développement front-end avec HTML, CSS et JavaScript</li>
+                                    <li>Collaboration avec les équipes marketing pour optimiser l'UX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2018 - 2020</h3>
+                                <p>Administrateur Systèmes chez DataSecure</p>
+                                <ul>
+                                    <li>Gestion et maintenance de serveurs Linux</li>
+                                    <li>Mise en place de politiques de sécurité</li>
+                                    <li>Automatisation des tâches avec des scripts Python</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2016 - 2018</h3>
+                                <p>Développeur Python Junior chez CodeCraft</p>
+                                <ul>
+                                    <li>Développement de scripts d'automatisation pour l'analyse de données</li>
+                                    <li>Participation à la création d'une API RESTful avec Flask</li>
+                                    <li>Collaboration au sein d'une équipe agile utilisant la méthodologie Scrum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2015 - 2016</h3>
+                                <p>Stagiaire en Base de Données chez DataPro</p>
+                                <ul>
+                                    <li>Assistance dans la conception et l'optimisation de bases de données SQL</li>
+                                    <li>Création de requêtes complexes pour l'analyse de données</li>
+                                    <li>Participation à la migration d'une base de données vers un système cloud</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2014 - 2015</h3>
+                                <p>Assistant Graphiste chez CreativeVision</p>
+                                <ul>
+                                    <li>Création de visuels pour les réseaux sociaux et le marketing digital</li>
+                                    <li>Assistance dans la conception de logos et d'identités visuelles</li>
+                                    <li>Participation à des séances photos et retouche d'images</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="objectifs" class="section">
+                <div class="container">
+                    <h2 class="section-title">Mes Objectifs Futurs</h2>
+                    <ul class="objectives-list">
+                        <li>Devenir un Data Analyst expert en maîtrisant des outils comme Pandas, NumPy et Scikit-learn</li>
+                        <li>Me spécialiser en tant que développeur en Intelligence Artificielle, en me concentrant sur le deep learning et le NLP</li>
+                        <li>Contribuer à des projets open-source dans le domaine de l'IA et de l'analyse de données</li>
+                    </ul>
+                </div>
+            </section>
+            <div id="courseModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="courseTitle"></h2>
+                    <div id="courseContent"></div>
+                </div>
+            </div>
+        </main>
+        <div class="fab">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+        <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const modal = document.getElementById("courseModal");
+                const closeBtn = document.querySelector(".close");
+                const courseButtons = document.querySelectorAll(".course-btn");
+                const courseTitle = document.getElementById("courseTitle");
+                const courseContent = document.getElementById("courseContent");
+                courseButtons.forEach(btn => {
+                    btn.addEventListener("click", function() {
+                        const skill = this.parentElement.parentElement.parentElement.getAttribute("data-skill");
+                        openModal(skill);
+                    });
+                });
+                closeBtn.onclick = function() {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.style.display = "none";
+                    }, 300);
+                };
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.classList.remove('show');
+                        setTimeout(() => {
+                            modal.style.display = "none";
+                        }, 300);
+                    }
+                };
+                function openModal(skill) {
+                    const courses = {
+                        python: {
+                            title: "Cours de Développement Python",
+                            content: "Découvrez les fondamentaux de Python, de la syntaxe de base aux concepts avancés comme la programmation orientée objet et les bibliothèques populaires.",
+                            topics: ["Variables et types de données", "Structures de contrôle", "Fonctions et modules", "Programmation orientée objet", "Bibliothèques populaires (NumPy, Pandas, Matplotlib)"]
+                        },
+                        linux: {
+                            title: "Cours d'Administration Linux",
+                            content: "Apprenez à gérer des systèmes Linux, de l'installation à la configuration avancée, en passant par la gestion des utilisateurs et la sécurité.",
+                            topics: ["Installation et configuration de base", "Gestion des utilisateurs et des permissions", "Administration du système", "Scripting shell", "Sécurité et pare-feu"]
+                        },
+                        database: {
+                            title: "Cours sur les Bases de Données",
+                            content: "Explorez les concepts des bases de données relationnelles et NoSQL, y compris la conception, l'optimisation et l'administration.",
+                            topics: ["Modélisation de données", "SQL", "Conception de schémas", "Optimisation des requêtes", "Bases de données NoSQL"]
+                        },
+                        graphics: {
+                            title: "Cours de Graphisme",
+                            content: "Maîtrisez les outils de création graphique et les principes de design pour créer des visuels impactants pour le web et l'impression.",
+                            topics: ["Théorie des couleurs", "Composition", "Typographie", "Outils de conception graphique", "Design pour le web et l'impression"]
+                        },
+                        webdesign: {
+                            title: "Cours de Web Design",
+                            content: "Apprenez à créer des sites web attrayants et fonctionnels, en utilisant HTML, CSS et JavaScript, ainsi que les principes de l'UX/UI design.",
+                            topics: ["HTML5 et CSS3", "Responsive design", "JavaScript et frameworks front-end", "Principes de l'UX/UI", "Optimisation des performances"]
+                        },
+                        javascript: {
+                            title: "Cours de Développement JavaScript",
+                            content: "Maîtrisez JavaScript pour le développement front-end et back-end, y compris les frameworks modernes et les concepts avancés.",
+                            topics: ["Syntaxe et concepts de base", "Manipulation du DOM", "AJAX et Fetch API", "ES6+ et fonctionnalités modernes", "Frameworks front-end (React, Vue, Angular)", "Node.js pour le back-end"]
+                        }
+                    };
+                    courseTitle.textContent = courses[skill].title;
+                    courseContent.innerHTML = `<p>${courses[skill].content}</p><h3>Sujets couverts :</h3><ul>${courses[skill].topics.map(topic => `<li>${topic}</li>`).join('')}</ul>`;
+                    modal.style.display = "block";
+                    setTimeout(() => {
+                        modal.classList.add('show');
+                    }, 10);
+                };
+                const skillCards = document.querySelectorAll('.skill-card');
+                skillCards.forEach(card => {
+                    card.addEventListener('mouseover', () => {
+                        card.style.transform = 'scale(1.1) rotate(5deg)';
+                    });
+                    card.addEventListener('mouseout', () => {
+                        card.style.transform = 'scale(1) rotate(0deg)';
+                    });
+                });
+                ScrollReveal().reveal('.section', {delay: 200, distance: '50px', duration: 1000, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)'});
+                const competenceItems = document.querySelectorAll('.competence-item');
+                competenceItems.forEach(item => {
+                    item.addEventListener('mouseover', () => {
+                        item.style.transform = 'scale(1.1) rotate(5deg)';
+                    });
+                    item.addEventListener('mouseout', () => {
+                        item.style.transform = 'scale(1) rotate(0deg)';
+                    });
+                });
+                smoothScroll();
+                function smoothScroll() {
+
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const targetId = this.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            window.scrollTo({top: targetElement.offsetTop - 80, behavior: 'smooth'});
+                        });
+                    });
+
+                }
+                var typed = new Typed('#typed', {
+                    strings: ["Développeur Python passionné", "Expert en administration Linux", "Spécialiste des bases de données", "Graphiste créatif", "Web Designer innovant", "Futur Data Analyst", "Aspirant en IA"],
+                    typeSpeed: 50,
+                    backSpeed: 30,
+                    loop: true
+                });
+                function fetchQuote() {
+                    const quotes = ["Il y a 10 types de personnes dans le monde : ceux qui comprennent le binaire et ceux qui ne le comprennent pas.", "Un programmeur est une machine qui transforme le café en code.", "Je ne suis pas antisocial, je suis juste en mode débogage.", "Pourquoi les programmeurs préfèrent-ils la nuit ? Parce que le temps de compilation est plus court.", "Le code, c'est comme l'humour. Quand on doit l'expliquer, c'est mauvais."];
+                    const quoteContent = document.getElementById('quote-content');
+                    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                    quoteContent.textContent = randomQuote;
+                }
+                fetchQuote();
+                setInterval(fetchQuote, 10000);
+                window.addEventListener('scroll', () => {
+                    const header = document.querySelector('header');
+                    const headerLogo = document.getElementById('header-logo');
+                    if (window.scrollY > 100) {
+                        header.classList.add('scrolled');
+                        headerLogo.style.filter = 'brightness(1.2)';
+                    } else {
+                        header.classList.remove('scrolled');
+                        headerLogo.style.filter = 'none';
+                    }
+                });
+                var fab = document.querySelector('.fab');
+                fab.addEventListener('click', () => {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                });
+                particlesJS.load('particles-js', 'assets/particles.json', function() {
+                    console.log('callback - particles.js config loaded');
+                });
+                VanillaTilt.init(document.querySelectorAll(".skill-card"), {
+                    max: 10,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.3,
+                });
+                const animatedElements = document.querySelectorAll('.skill-card, .section-title, .objectives-list li');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-fadeInUp');
+                        }
+                    });
+                }, {threshold: 0.1});
+                animatedElements.forEach(element => {
+                    observer.observe(element);
+                });
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                timelineItems.forEach((item, index) => {
+                    item.style.animationDelay = `${index * 0.3}s`;
+                    item.classList.add('animate-fadeInUp');
+                });
+                ScrollReveal().reveal('.section, .timeline-item', {delay: 200, distance: '50px', duration: 1000, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)'});
+                const galleryImages = document.querySelectorAll('.gallery-img');
+                galleryImages.forEach(img => {
+                    img.addEventListener('click', () => {
+                        const modal = document.createElement('div');
+                        modal.classList.add('image-modal');
+                        modal.innerHTML = `<span class="close-modal">&times;</span><img src="${img.src}" alt="${img.alt}">`;
+                        document.body.appendChild(modal);
+                        modal.querySelector('.close-modal').addEventListener('click', () => {
+                            modal.remove();
+                        });
+                    });
+                });
+                const handleImageError = (img) => {
+                    img.onerror = function() {
+                        this.style.display = 'none';
+                        console.log('Failed to load image:', this.src);
+                    };
+                };
+                document.querySelectorAll('img').forEach(handleImageError);
+            });
+        </script>
+    </body>
 </html>
